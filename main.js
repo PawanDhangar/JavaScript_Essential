@@ -14,6 +14,8 @@ const age= 30;
 console.log(age);
 */
 
+/*====================================================================================*/
+
 //String,Numbers,Boolean,null,Undefined
 
 /*
@@ -45,6 +47,9 @@ console.log(s.split(''));
 const s1 = 'techmology,computers,it,code';
 
 console.log(s1.split(','));
+
+
+/*====================================================================================*/
 
 //Arrays - variables that hold multile values
 
@@ -83,6 +88,8 @@ console.log(fruits.indexOf('oranges'));
 console.log(fruits);
 
 
+/*====================================================================================*/
+
 //Object literals
 const preson = {
     firstname: 'john',
@@ -105,6 +112,8 @@ preson.email = "pawandhangar@gamail.com";
 console.log(preson);
 
 
+/*====================================================================================*/
+
 //Arrays with const
 const todos= [  
     {
@@ -125,6 +134,8 @@ const todos= [
 ];
 
 console.log(todos[1].text);
+
+/*====================================================================================*/
 
 //JSON formate to  send to server
 // const todoJSON = JSON.stringify(todos);
@@ -152,6 +163,8 @@ console.log(todos[1].text);
 // console.log(todo.text);
 // }
 
+/*====================================================================================*/
+
 //forEach,map ,filter
 
 //forEach
@@ -174,6 +187,8 @@ todos.forEach((todo)=>console.log(todo));
 //     return todo.text;
 //   })
 //   console.log(todoCompleted);
+
+/*====================================================================================*/
 
 //Conditionals
 
@@ -211,6 +226,8 @@ todos.forEach((todo)=>console.log(todo));
 //      break; 
 // }
 
+/*====================================================================================*/
+
 //Functions
 function addNums(num1=1,num2=1){
   return num1+num2;
@@ -233,12 +250,14 @@ console.log(addNums3(5,4))
 const addNums4=num1=>num1+5;
 console.log(addNums4(5));
 
+/*====================================================================================*/
+
 //OOps
 //Constructor function
-function Person(firstname,lastname,dob){
-  this.firstname = firstname;
-  this.lastName = lastname;
-  this.dob = new Date(dob);
+// function Person(firstname,lastname,dob){
+//   this.firstname = firstname;
+//   this.lastName = lastname;
+//   this.dob = new Date(dob);
   // this.getBirthyear = function(){
   //   return this.dob.getFullYear();
   // }
@@ -253,7 +272,7 @@ function Person(firstname,lastname,dob){
 // Person.prototype.getFullName = function(){
 //   return `${this.firstname} ${this.lastName}`;
 // }
-}
+//}
 
 //Initiate Object
 //const Person1 = new Person('John','Doe','4-03-2004');
@@ -265,29 +284,35 @@ function Person(firstname,lastname,dob){
 // console.log(Person2.dob.getFullYear());
 // console.log(Person1.getFullName());
 
-//Class
-class Person5{
-  constructor(firstname,lastname,dob){
-    this.firstname = firstname;
-    this.lastName = lastname;
-    this.dob = new Date(dob);
-}
- getBirthyear(){
-  return this.dob.getFullYear();
- }
 
-getFullName(){
-  return `${this.firstname} ${this.lastName}`;
-}
-}
+/*====================================================================================*/
+
+//Class
+// class Person5{
+//   constructor(firstname,lastname,dob){
+//     this.firstname = firstname;
+//     this.lastName = lastname;
+//     this.dob = new Date(dob);
+// }
+//  getBirthyear(){
+//   return this.dob.getFullYear();
+//  }
+
+// getFullName(){
+//   return `${this.firstname} ${this.lastName}`;
+// }
+// }
+
+
+/*====================================================================================*/
 
 //Initiate Object
-const Person1 = new Person5('John','Doe','4-03-2004');
-const Person2 = new Person5('John','Doe','4-03-2003');
+// const Person1 = new Person5('John','Doe','4-03-2004');
+// const Person2 = new Person5('John','Doe','4-03-2003');
 
-console.log(Person2.getBirthyear());
-console.log(Person1.getFullName());
-console.log(Person1);
+// console.log(Person2.getBirthyear());
+// console.log(Person1.getFullName());
+// console.log(Person1);
 
 //DOM
 
@@ -309,36 +334,39 @@ console.log(Person1);
 // const items = document.querySelectorAll('.item');
 // items.forEach((item) => console.log(item));
 
+
+/*====================================================================================*/
+
 //Manipulating In DOM
 
- const ul = document.querySelector('.items');
+ //const ul = document.querySelector('.items');
  //ul.remove();
 //ul.lastElementChild.remove();
 
-ul.firstElementChild.textContent = "Hello";
-ul.children[1].innerText = 'Brad';
-ul.lastElementChild.innerHTML= '<h4>Hello</h4>';
+// ul.firstElementChild.textContent = "Hello";
+// ul.children[1].innerText = 'Brad';
+// ul.lastElementChild.innerHTML= '<h4>Hello</h4>';
 
-const btn = document.querySelector('.btn');
-btn.style.background = 'red';
+// const btn = document.querySelector('.btn');
+// btn.style.background = 'red';
 
-const taxt = document.querySelector('header');
+// const taxt = document.querySelector('header');
 
-//taxt.style.textAlign ='left';
-taxt.style.color ='blue';
+// //taxt.style.textAlign ='left';
+// taxt.style.color ='blue';
 
-const btn1 = document.querySelector('.btn');
+// const btn1 = document.querySelector('.btn');
 
-btn1.addEventListener('mouseout',(e) =>{
-  e.preventDefault();
-  // console.log('click');
-  console.log(e.target.className);
-  const id = document.querySelector('#my-form');
-  id.style.background = '#ccc';
+// btn1.addEventListener('mouseout',(e) =>{
+//   e.preventDefault();
+//   // console.log('click');
+//   console.log(e.target.className);
+//   const id = document.querySelector('#my-form');
+//   id.style.background = '#ccc';
 
-  document.querySelector('body').classList.add('bg-dark');
-  document.querySelector('.items').lastElementChild.innerHTML = '<h1>hello<h1>';
-});
+//   document.querySelector('body').classList.add('bg-dark');
+//   document.querySelector('.items').lastElementChild.innerHTML = '<h1>hello<h1>';
+// });
 
 
 const myForm = document.querySelector('#my-form');
@@ -373,3 +401,9 @@ function onSubmit(e){
 
   }
 }
+
+//Backend
+//Fatch API
+//Ajax
+//Node
+//Localstorage
